@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title> USER SIGNUP</title>
+  <style type= "text/css">
+        h1{
+            color:blue;
+        }
+
+        label{
+            padding: 6px;
+            position:relative;
+            color: red;   
+        }
+
+        input[type ="text"]{
+            margin: 2px;
+            border-color:green;
+            padding-bottom:1px; 
+          
+        }
+        
+        input[type ="submit"]{
+            margin-left: 6px;
+        }
+
+        #user-name{
+          margin-left:1.17cm;
+          border-color:red;
+          padding-bottom:1.5px;
+        }
+    
+
+        #password{
+            border-color: red;
+            margin-left: 1.27cm;
+            padding-bottom: 0.8px;
+        }
+
+        #verify-password{
+            padding-bottom:1px;
+            margin-left: 0.05cm;
+            margin-top:1.4px;
+            border-color:red;
+        }
+
+        #email{
+           margin-left:0.10cm;
+           border-color:red;
+           padding-bottom:1px;
+        }
+         
+        
+        .u_error, .p_error, .v_error {
+            color:red;
+        }
+  </style>
+  </head>
+  <body>
+ 
+    {% block content %}
+        {% endblock %}
+  </body>
+  </html>

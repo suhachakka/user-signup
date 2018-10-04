@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+    <form  action ="/" method = "POST">
+    <h1><b> Signup </b></h1>
+
+    
+    
+    <label for = "user-name" > Username 
+    <input  id ="user-name"  type ="text"  name ="user-name" value = ' '/> {{u_error}}
+    </label>
+    <!--p class= "error">{{u_error}}</p> -->
+
+    <br/>
+   
+    <label for = "password">Password
+    <input id ="password"  type ="password"  name="password" value ='{{password}}'/>    {{p_error}}
+    </label>
+    <!--p error = "error">{{p_error}}</p>-->
+
+    <br/>  
+     
+
+    <label>Verify Password 
+    <input id ="verify-password" type ="password"  name ="verify-password" value='{{verify_password}}'/>   {{v_error}}
+    </label>
+    <!--p error = "error">{{v_error}}</p>-->
+
+    <br/>
+     
+
+
+    <label for ="email"> Email (optional) 
+    <input id = "email"  type ="text" name ="email" value ='{{email}}' />  {{e_error}}
+    </label>
+    <br/>
+    <input type = "submit" />
+
+</form>  
+<!--{% if error %}
+  <p class='error'>{{ error }}</p>
+{% endif %}--> 
+
+{% endblock %}
+
