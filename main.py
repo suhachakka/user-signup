@@ -23,7 +23,11 @@ def validate():
     v_error=''  
     e_error =''
 
-    if user_name == ' ' or len(user_name) > 20 or len(user_name) < 3: 
+    if user_name == '':
+          u_error= 'That\'s not a valid Username' 
+           
+
+    if len(user_name) >20 or len(user_name) < 3: 
         u_error= 'That\'s not a valid Username' 
            
       
@@ -36,15 +40,15 @@ def validate():
 
     if len(e_mail) > 0:
        if (len(e_mail) > 20 or len(e_mail) <3):
-           e_error = 'Address requires some characters'
+           e_error = 'That\'s not a valid email'
         
 
        elif e_mail.count(' ') >0:
-            e_error = 'Address requires some characters'
+            e_error = 'That\'s not a valid email'
          
 
        elif e_mail.count('@') != 1  or e_mail.count('.') !=1:
-             e_error = 'Address requires some characters'
+             e_error = 'That\'s not a valid email'
 
     #regular expression
     #mail ="EmailMatches:",len(re.findall("\w._%+-]{1,20}@[\w.-]{2,20}.[A-Za-z]{2,3}",e_mail))
@@ -68,5 +72,5 @@ def validate():
 def valid():
     msg =request.args.get('msg') 
     #return '<h1> Welcome,  {0}! </h1>'.format(msg)
-    return render_template('validation.html', msg=msg)
+    return render_template('validation.html', msg = msg)
 app.run()
